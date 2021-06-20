@@ -1,2 +1,2 @@
 # A1LG1-IFSP-SPO
-Exercícios da disciplina Lógica de Programação I da faculdade IFSP SPO.
+Exercícios em lingugame C da disciplina Lógica de Programação I - 1º semestre 2021 - faculdade IFSP SPO.
