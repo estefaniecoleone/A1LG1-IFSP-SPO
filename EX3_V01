@@ -1,0 +1,28 @@
+#include <stdio.h>  
+#include <conio.h>  
+
+//Faça um algoritmo que leia um certo valor em reais (R$). A partir
+//daí, calcule os valores de conversão para dólar, euro, peso e iene. No final exiba o valor de entrada e
+//os valores das conversões e as diferenças em relação ao valor digitado.
+
+int main()  
+
+{ 
+
+	float REAL;  
+
+  
+		printf(" Digite o valor em Reais............: ");  
+		scanf("%f", &REAL);  
+
+  		printf("\n A conversao para Dolar eh..........: %.4f", REAL * 5.05);  
+		printf("\n A diferenca pro valor em Real eh...: %.4f", (REAL * 5.05) - REAL);  
+		printf("\n \n A conversao para Euro eh...........: %.4f", REAL * 6.14);  
+		printf("\n A diferenca pro valor em Real eh...: %.4f", (REAL * 6.14) - REAL);  
+		printf("\n \n A conversao para Peso eh...........: %.4f", REAL * 0.054);  
+		printf("\n A diferenca pro valor em Real eh...: %.4f", REAL - (REAL * 0.054));   
+		printf("\n \n A conversao para Iene eh...........: %.4f", REAL * 0.046);  
+		printf("\n A diferenca pro valor em Real eh...: %.4f", REAL - (REAL * 0.046));  
+  
+getch();  
+} 
