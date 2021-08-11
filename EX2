@@ -1,0 +1,32 @@
+#include <stdio.h> 
+#include <conio.h> 
+
+//Escreva um algoritmo que solicite ao usuário dois números inteiros diferentes de zero. 
+// A partir desses números exiba na tela a soma, a subtração, o produto, a divisão e a média aritmética. 
+
+int main() 
+{ 
+	int A, B; 
+
+	printf(" Digite dois numeros inteiros diferentes de zero");
+	printf("\n\n Digite o 1.o numero: "); 
+	scanf("%i", &A); 
+	printf(" Digite o 2.o numero: "); 
+	scanf("%i", &B); 
+	
+	if (A == 0) 
+	{ 
+		printf("\n Digite 2 numeros diferentes de zero!"); 
+	} 
+	else 
+	{ 
+		printf("\n A soma eh..........: %i", A + B); 
+		printf("\n A subtracao eh.....: %i", A - B); 
+		printf("\n O produto eh.......: %i", A * B); 
+		printf("\n A divisao eh.......: %.2f", (float) A / B); 
+		printf("\n A media eh.........: %.2f", (float)(A + B) / 2); 
+	} 
+
+getch(); 
+
+} 
