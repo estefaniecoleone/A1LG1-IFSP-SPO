@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <conio.h>
+
+// 4) Uma panificadora está tentando reduzir o desperdício na produção de pães franceses, 
+//para isso está controlando melhor o uso dos insumos em relação a sua produção diária. 
+//Assim sendo, faça um algoritmo (portugol e Linguagem C) que receba o peso da farinha comprada, em quilos, o peso necessário para fazer um pãozinho, em gramas, 
+//e calcule quantos pães poderão ser produzidos com a quantidade de farinha informada. 
+//Em seguida informe qual será o faturamento da panificadora, se os pães forem vendidos a R$ 0,50 a unidade. 
+
+int main()
+{ 
+
+float PESO_FARINHA, PESO_PAO, QTD_PAES;
+	
+  printf(" Digite o peso da farinha em KiloGrama.....: ");
+	scanf("%f", &PESO_FARINHA);
+	printf(" Digite o peso para fazer 1 pao em gramas..: ");
+	scanf("%f", &PESO_PAO);
+
+	PESO_FARINHA = PESO_FARINHA * 1000;	
+	QTD_PAES = PESO_FARINHA / PESO_PAO;	
+	printf("\n A quantidade de paes que pode ser produzido eh..........: %0.2f", QTD_PAES);
+	printf("\n O faturamento em reais sera de..........................: %0.2f", QTD_PAES * 0.50);
+
+getch();
+}
