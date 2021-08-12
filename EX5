@@ -1,0 +1,36 @@
+//Desenvolva um programa que crie dois vetores A e B com 10 elementos. 
+//A partir deles crie um vetor C, que receberá os elementos de A e B intercalados
+
+#include <stdio.h>
+#include <conio.h>
+
+int main() {
+	
+	int vetorA[10], vetorB[10], vetorC[20], i;
+
+	printf ("========================================\n\n");
+	
+	for (i=0;i<10;i++) {
+		printf ("Forneca %i%c valor Vetor A: ",I+1,167);
+		scanf ("%d", &vetorA[I]);	
+	}
+	
+	printf ("\n========================================\n\n");
+	
+	for (i=0; i<10; i++) {
+		printf ("Forneca %i%c valor Vetor B: ",I+1,167);
+		scanf ("%d", &vetorB[I]);	
+	}	
+	for (i=0; i<20; i++) {
+		vetorC[I*2] = vetorA[I];
+		vetorC[I*2+1] = vetorB[I];
+	}
+	
+	printf ("\n========================================\n\n");
+	
+	for (i=0; i<20; i++) {
+		printf ("%d  ", vetorC[I]);	
+	}
+	
+getch();
+}
