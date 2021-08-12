@@ -1,0 +1,48 @@
+// Crie um vetor para receber 10 notas de um aluno. Em seguida, devem ser exibidas as notas inseridas. 
+// Além disso, deve ser calculada a média aritmética e exibido no final, o resultado:
+// Média >= 8 -> Plenamente Satisfatório (PS)
+// 8 > Média >=6 -> Satisfatório (S)
+// 6 > Média >= 4 ->Regular (R)
+// Média < 4 -> Insatisfatório
+
+#include <stdio.h>
+#include <conio.h>
+
+int main ()
+{
+	
+	float nota [10], media, mediaF;
+	int i;
+	
+	for (i=0;i<10;i++) {
+		printf (" Digite a %i%c Nota :", i+1,166);
+		scanf ("%f", &nota[i]);		
+	}
+	
+	
+	for (i=0;i<10;i++) {
+		mediaF = (mediaF + nota[i]);
+	}
+	
+	mediaF = (mediaF / 10);
+	
+	if (mediaF>=8)	
+		printf ("\n Plenamente Satisfatorio (PS) - Media: %f", mediaF);
+	 
+	else
+	
+	if (mediaF>=6 || mediaF<8)	
+		printf ("\n Satisfatorio (S) - Media: %f", mediaF);
+		
+	 else
+			
+	if (mediaF>=4 || mediaF<6)	
+		printf ("\n Regular (R) - Media: %f", mediaF);
+		
+	else
+	
+	if (mediaF<4)	
+		printf ("\n Insatisfatorio (I) - Media: %f" , mediaF);
+	
+getch();
+}
