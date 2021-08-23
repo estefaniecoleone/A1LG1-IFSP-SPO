@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<locale.h>
+
+//Crie um registro na linguagem C para cadastrar 5 atletas de natação com nome, idade e sexo. Crie uma também uma função que receba como parâmetros idade e sexo. 
+//No final seu programa deve mostrar quantos atletas são juvenis; quantos não são adultos; e a porcentagem de mulheres do grupo de atletas. 
+//Veja a tabela de classificação:
+//idade / categoria
+//8 a 12 anos / infantil
+//acima de 12 a 16 anos / juvenil
+//acima de 16 até 20 anos / junior
+//acima de 20 anos / adulto
+
+int contJuv=0, contNAdulto=5;
+float contMulher=0;
+
+void fdados (int idade, char sexo){
+	if(idade > 12 && idade <= 16)
+		contJuv++;
+	if(idade > 21)
+		contNAdulto--;
+	if(sexo == 'F' || sexo == 'f')
+		contMulher++;
+}
+
+struct cadAtleta{
+	char nome[50];
+	int idade;
+	char sexo;
+} Atleta[5];
+
+int main(){
+	
+	setlocale(LC_ALL, "portuguese");
+	
+	int i;
+		
+	printf("*=*=* Cadastro dos Atletas *=*=*\n\n");
+	for(i=0; i<5; i++){
+		printf("\nAtleta Nº%d\n", i+1);
+		printf("NOME: ");
+		fflush(stdin);
+		fgets(Atleta[i].nome, 50, stdin);
+		printf("IDADE: ");
+		scanf("%d", &Atleta[i].idade);
+		printf("Sexo [M/F]: ");
+		fflush(stdin);
+		scanf("%c", &Atleta[i].sexo);
+		fdados(Atleta[i].idade, Atleta[i].sexo);
+	}
+	
+	printf("\n====================================\n");
+	printf(" Nº atletas juvenis.....: %d\n", contJuv);
+	printf(" Nº atletas não adultos.: %d\n", contNAdulto);
+	printf(" Porcentagem de mulheres: %.2f %%\n", contMulher/5*100);
+	printf("====================================\n");
+	
+		
+}
